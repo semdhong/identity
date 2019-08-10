@@ -33,8 +33,7 @@ namespace works.ei8.IdentityAccess
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders()
-                .Services.AddTransient<IProfileService, TestProfileService>();
+                .AddDefaultTokenProviders();
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
@@ -51,7 +50,8 @@ namespace works.ei8.IdentityAccess
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApiResources())
                 .AddInMemoryClients(Config.GetClients(this.Configuration.GetSection("Clients")))
-                .AddAspNetIdentity<ApplicationUser>();
+                .AddAspNetIdentity<ApplicationUser>()
+                .AddProfileService<TestProfileService>();
 
             // TODO: services.AddAuthentication()
             //    .AddGoogle("Google", options =>

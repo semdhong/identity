@@ -31,13 +31,16 @@ namespace works.ei8.IdentityAccess
                     AccessTokenType = AccessTokenType.Reference,
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials, // TODO: GrantTypes.Hybrid,                    
                     //Used to retrieve the access token on the back channel.
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
+                    // should not require client secret since client is a native app (needed for web server apps only)
+                    RequireClientSecret = false,
+                    //ClientSecrets =
+                    //{
+                    //    new Secret("secret".Sha256())
+                    //},                    
                     RedirectUris = { $"{configuration.GetValue<string>("Xamarin")}/cortex/diary/callback" },
                     RequireConsent = false,
-                    RequirePkce = true,
+                    // require code challenge?
+                    RequirePkce = false,
                     PostLogoutRedirectUris = { Config.GetLogoutRedirectUri(configuration) },
                     AllowedCorsOrigins = { $"{configuration.GetValue<string>("Xamarin")}" },
                     AllowedScopes = new List<string>
