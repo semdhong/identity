@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using works.ei8.IdentityAccess.Data;
 using works.ei8.IdentityAccess.Models;
 using works.ei8.IdentityAccess.Services;
-using IdentityServer4;
-using IdentityServer4.Services;
 
 namespace works.ei8.IdentityAccess
 {

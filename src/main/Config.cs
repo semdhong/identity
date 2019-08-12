@@ -16,7 +16,8 @@ namespace works.ei8.IdentityAccess
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API") { ApiSecrets = { new Secret("secret".Sha256()) } }
+                new ApiResource("cortex-graph-out", "neurUL Cortex Graph (Out)") { ApiSecrets = { new Secret("secret".Sha256()) } },
+                new ApiResource("cortex-in", "neurUL Cortex (In)") { ApiSecrets = { new Secret("secret".Sha256()) } }
             };
         }
 
@@ -48,7 +49,8 @@ namespace works.ei8.IdentityAccess
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
-                        "api1"
+                        "cortex-graph-out",
+                        "cortex-in"
                         //"orders",
                         //"basket",
                         //"locations",
