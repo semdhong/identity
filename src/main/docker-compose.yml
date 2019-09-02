@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  identityaccess:
+    image: identityaccess
+    build:
+      context: .
+      dockerfile: Dockerfile

@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using works.ei8.IdentityAccess.Data;
 using works.ei8.IdentityAccess.Models;
 using works.ei8.IdentityAccess.Services;
+using static works.ei8.IdentityAccess.Constants;
 
 namespace works.ei8.IdentityAccess
 {
@@ -23,7 +25,7 @@ namespace works.ei8.IdentityAccess
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ConnectionStringsDefault))); 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -36,8 +38,8 @@ namespace works.ei8.IdentityAccess
 
             // configure identity server with in-memory stores, keys, clients and scopes
             services.AddIdentityServer(o => {
-                    o.IssuerUri = this.Configuration.GetValue<string>("IssuerUri");
-                    o.UserInteraction.LogoutUrl = Config.GetLogoutRedirectUri(this.Configuration.GetSection("Clients"));
+                    o.IssuerUri = Environment.GetEnvironmentVariable(EnvironmentVariableKeys.IssuerUri);
+                    o.UserInteraction.LogoutUrl = Config.GetLogoutRedirectUri(Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin));
                 })
                 .AddDeveloperSigningCredential()
                 .AddInMemoryPersistedGrants()

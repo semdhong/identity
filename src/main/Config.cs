@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using static works.ei8.IdentityAccess.Constants;
 
 namespace works.ei8.IdentityAccess
 {
@@ -38,12 +39,12 @@ namespace works.ei8.IdentityAccess
                     //{
                     //    new Secret("secret".Sha256())
                     //},                    
-                    RedirectUris = { $"{configuration.GetValue<string>("Xamarin")}/cortex/diary/callback" },
+                    RedirectUris = { $"{Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin)}/cortex/diary/callback" },
                     RequireConsent = false,
                     // require code challenge?
                     RequirePkce = false,
-                    PostLogoutRedirectUris = { Config.GetLogoutRedirectUri(configuration) },
-                    AllowedCorsOrigins = { $"{configuration.GetValue<string>("Xamarin")}" },
+                    PostLogoutRedirectUris = { Config.GetLogoutRedirectUri(Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin)) },
+                    AllowedCorsOrigins = { $"{Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin)}" },
                     AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
@@ -67,10 +68,9 @@ namespace works.ei8.IdentityAccess
             };
         }
 
-        internal static string GetLogoutRedirectUri(IConfigurationSection configuration)
+        internal static string GetLogoutRedirectUri(string client) // TODO: get configuration specific values - IConfigurationSection configuration)
         {
-            // TODO: create system wide logout uri for all clients
-            return $"{configuration.GetValue<string>("Xamarin")}{Constants.Paths.Logout}";
+            return $"{client}{Constants.Paths.Logout}";
         }
 
         public static List<TestUser> GetUsers()
