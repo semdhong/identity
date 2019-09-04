@@ -2,9 +2,9 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using works.ei8.IdentityAccess.Models.ConsentViewModels;
+using works.ei8.Identity.Models.ConsentViewModels;
 
-namespace works.ei8.IdentityAccess.Controllers
+namespace works.ei8.Identity.Controllers
 {
     public class ProcessConsentResult
     {

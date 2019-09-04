@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using IdentityServer4.Stores;
 
-namespace works.ei8.IdentityAccess.Extensions
+namespace works.ei8.Identity.Extensions
 {
     public static class Extensions
     {

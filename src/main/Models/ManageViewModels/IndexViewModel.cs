@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace works.ei8.IdentityAccess.Models.ManageViewModels
+namespace works.ei8.Identity.Models.ManageViewModels
 {
     public class IndexViewModel
     {

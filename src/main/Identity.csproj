@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-AspNetIdentity-C1A71811-8B89-4B4A-B159-6B6754C75366</UserSecretsId>
-    <AssemblyName>works.ei8.IdentityAccess</AssemblyName>
-    <RootNamespace>works.ei8.IdentityAccess</RootNamespace>
+    <AssemblyName>works.ei8.Identity</AssemblyName>
+    <RootNamespace>works.ei8.Identity</RootNamespace>
     <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 

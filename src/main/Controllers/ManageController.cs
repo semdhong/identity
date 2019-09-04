@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using works.ei8.IdentityAccess.Models;
-using works.ei8.IdentityAccess.Models.ManageViewModels;
-using works.ei8.IdentityAccess.Services;
+using works.ei8.Identity.Models;
+using works.ei8.Identity.Models.ManageViewModels;
+using works.ei8.Identity.Services;
 
-namespace works.ei8.IdentityAccess.Controllers
+namespace works.ei8.Identity.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

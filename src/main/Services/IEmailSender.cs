@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace works.ei8.IdentityAccess.Services
+namespace works.ei8.Identity.Services
 {
     public interface IEmailSender
     {

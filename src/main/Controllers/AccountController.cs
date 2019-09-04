@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using IdentityModel;
+using IdentityServer4.Events;
+using IdentityServer4.Extensions;
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using works.ei8.IdentityAccess.Models;
-using works.ei8.IdentityAccess.Models.AccountViewModels;
-using works.ei8.IdentityAccess.Services;
-using IdentityServer4.Services;
-using IdentityServer4.Events;
-using IdentityServer4.Extensions;
-using IdentityModel;
-using IdentityServer4;
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using works.ei8.Identity.Models;
+using works.ei8.Identity.Models.AccountViewModels;
+using works.ei8.Identity.Services;
 
-namespace works.ei8.IdentityAccess.Controllers
+namespace works.ei8.Identity.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

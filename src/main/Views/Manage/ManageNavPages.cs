@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
-namespace works.ei8.IdentityAccess.Views.Manage
+namespace works.ei8.Identity.Views.Manage
 {
     public static class ManageNavPages
     {

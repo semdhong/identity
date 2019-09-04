@@ -1,4 +1,4 @@
-﻿@using works.ei8.IdentityAccess.Views.Manage
+﻿@using works.ei8.Identity.Views.Manage
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

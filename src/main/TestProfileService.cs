@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
-using works.ei8.IdentityAccess.Models;
+using works.ei8.Identity.Models;
 
-namespace works.ei8.IdentityAccess
+namespace works.ei8.Identity
 {
     internal class TestProfileService : IProfileService
     {

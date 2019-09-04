@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using works.ei8.IdentityAccess.Services;
+using works.ei8.Identity.Services;
 
-namespace works.ei8.IdentityAccess.Services
+namespace works.ei8.Identity.Services
 {
     public static class EmailSenderExtensions
     {

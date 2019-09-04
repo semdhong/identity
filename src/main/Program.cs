@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace works.ei8.IdentityAccess
+namespace works.ei8.Identity
 {
     public class Program
     {

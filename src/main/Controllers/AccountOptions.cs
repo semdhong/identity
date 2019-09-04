@@ -4,7 +4,7 @@
 
 using System;
 
-namespace works.ei8.IdentityAccess.Controllers
+namespace works.ei8.Identity.Controllers
 {
     public class AccountOptions
     {

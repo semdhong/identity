@@ -1,6 +1,6 @@
 using System;
 
-namespace works.ei8.IdentityAccess.Models
+namespace works.ei8.Identity.Models
 {
     public class ErrorViewModel
     {

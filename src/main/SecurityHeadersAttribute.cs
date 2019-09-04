@@ -5,7 +5,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace works.ei8.IdentityAccess
+namespace works.ei8.Identity
 {
     public class SecurityHeadersAttribute : ActionFilterAttribute
     {

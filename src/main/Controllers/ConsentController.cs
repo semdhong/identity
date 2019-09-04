@@ -12,11 +12,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Linq;
 using System.Threading.Tasks;
-using works.ei8.IdentityAccess.Models.ConsentViewModels;
-using works.ei8.IdentityAccess.Models.AccountViewModels;
-using works.ei8.IdentityAccess.Extensions;
+using works.ei8.Identity.Models.ConsentViewModels;
+using works.ei8.Identity.Models.AccountViewModels;
+using works.ei8.Identity.Extensions;
 
-namespace works.ei8.IdentityAccess.Controllers
+namespace works.ei8.Identity.Controllers
 {
     /// <summary>
     /// This controller processes the consent UI

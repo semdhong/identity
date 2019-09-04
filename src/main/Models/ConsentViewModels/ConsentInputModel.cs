@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace works.ei8.IdentityAccess.Models.ConsentViewModels
+namespace works.ei8.Identity.Models.ConsentViewModels
 {
     public class ConsentInputModel
     {

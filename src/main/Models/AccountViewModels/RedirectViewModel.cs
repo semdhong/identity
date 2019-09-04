@@ -3,7 +3,7 @@
 
 
 
-namespace works.ei8.IdentityAccess.Models.AccountViewModels
+namespace works.ei8.Identity.Models.AccountViewModels
 {
     public class RedirectViewModel
     {

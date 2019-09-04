@@ -4,8 +4,8 @@ EXPOSE 80
 
 FROM microsoft/aspnetcore-build:2.0-nanoserver-1709 AS build
 WORKDIR /src
-COPY ei8-IdentityAccess.sln ./
-COPY IdentityAccess.csproj ./
+COPY ei8-Identity.sln ./
+COPY Identity.csproj ./
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
 WORKDIR /src/
@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "IdentityAccess.dll"]
+ENTRYPOINT ["dotnet", "works.ei8.Identity.dll"]

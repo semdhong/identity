@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using static works.ei8.IdentityAccess.Constants;
+using static works.ei8.Identity.Constants;
 
-namespace works.ei8.IdentityAccess
+namespace works.ei8.Identity
 {
     public class Config
     {

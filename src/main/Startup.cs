@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using works.ei8.IdentityAccess.Data;
-using works.ei8.IdentityAccess.Models;
-using works.ei8.IdentityAccess.Services;
-using static works.ei8.IdentityAccess.Constants;
+using works.ei8.Identity.Data;
+using works.ei8.Identity.Models;
+using works.ei8.Identity.Services;
+using static works.ei8.Identity.Constants;
 
-namespace works.ei8.IdentityAccess
+namespace works.ei8.Identity
 {
     public class Startup
     {
