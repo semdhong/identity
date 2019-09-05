@@ -6,7 +6,7 @@
     <ProjectGuid>65fa2b7a-5248-4a29-a9ab-2e9d891270c1</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
-    <DockerServiceName>identityaccess</DockerServiceName>
+    <DockerServiceName>identity</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

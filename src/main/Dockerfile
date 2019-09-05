@@ -5,10 +5,10 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0-nanoserver-1709 AS build
 WORKDIR /src
 COPY ei8-Identity.sln ./
-COPY Identity.csproj ./
+COPY main/Identity.csproj main/
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
-WORKDIR /src/
+WORKDIR /src/main
 RUN dotnet build -c Release -o /app
 
 FROM build AS publish
