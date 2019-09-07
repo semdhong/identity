@@ -25,7 +25,7 @@ namespace works.ei8.Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ConnectionStringsDefault))); 
+                options.UseSqlite(Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ConnectionStringsDefault))); 
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

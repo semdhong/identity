@@ -6,6 +6,8 @@ services:
       - ./var1.env
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - C:\db:C:\db
     ports:
       - "5002:80"
 networks:
