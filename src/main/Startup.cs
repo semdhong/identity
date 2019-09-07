@@ -73,6 +73,7 @@ namespace works.ei8.Identity
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseMiddleware<HostNameMiddleware>();
             app.UseStaticFiles();
 
             // app.UseAuthentication();
