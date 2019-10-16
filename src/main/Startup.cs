@@ -49,6 +49,7 @@ namespace works.ei8.Identity
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddProfileService<TestProfileService>();
 
+            services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
             // TODO: services.AddAuthentication()
             //    .AddGoogle("Google", options =>
             //    {
