@@ -39,7 +39,7 @@ namespace works.ei8.Identity
                     //{
                     //    new Secret("secret".Sha256())
                     //},                    
-                    RedirectUris = { $"{Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin)}/cortex/diary/callback" },
+                    RedirectUris = { $"{Environment.GetEnvironmentVariable(EnvironmentVariableKeys.ClientsXamarin)}/Account/LoginCallback" },
                     RequireConsent = false,
                     // require code challenge?
                     RequirePkce = false,

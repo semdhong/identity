@@ -57,6 +57,12 @@ namespace works.ei8.Identity.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult LoginCallback()
+        {
+            return View();
+        }
+
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]

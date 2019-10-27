@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -49,7 +50,13 @@ namespace works.ei8.Identity
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddProfileService<TestProfileService>();
 
-            services.AddAntiforgery(o => o.SuppressXFrameOptionsHeader = true);
+            services.AddAntiforgery(o =>
+            {
+                o.SuppressXFrameOptionsHeader = true;
+                // iframe
+                // https://stackoverflow.com/questions/52669145/antiforgery-token-cookie-not-appearing-in-request-headers-only-in-when-embeded-i
+                o.Cookie.SameSite = SameSiteMode.None;
+            });
             // TODO: services.AddAuthentication()
             //    .AddGoogle("Google", options =>
             //    {
