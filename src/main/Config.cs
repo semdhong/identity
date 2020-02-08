@@ -18,7 +18,7 @@ namespace works.ei8.Identity
             return new List<ApiResource>
             {
                 new ApiResource("cortex-graph-out", "neurUL Cortex Graph (Out)") { ApiSecrets = { new Secret("secret".Sha256()) } },
-                new ApiResource("cortex-in", "neurUL Cortex (In)") { ApiSecrets = { new Secret("secret".Sha256()) } }
+                new ApiResource("cortex-sentry", "neurUL Cortex Sentry (In)") { ApiSecrets = { new Secret("secret".Sha256()) } }
             };
         }
 
@@ -32,7 +32,7 @@ namespace works.ei8.Identity
                     ClientName = "eShop Xamarin OpenId Client",
                     AccessTokenType = AccessTokenType.Reference,
                     AllowedGrantTypes = GrantTypes.HybridAndClientCredentials, // TODO: GrantTypes.Hybrid,                    
-                    //Used to retrieve the access token on the back channel.
+                    // Used to retrieve the access token on the back channel.
                     // should not require client secret since client is a native app (needed for web server apps only)
                     RequireClientSecret = false,
                     //ClientSecrets =
@@ -51,7 +51,7 @@ namespace works.ei8.Identity
                         IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
                         "cortex-graph-out",
-                        "cortex-in"
+                        "cortex-sentry"
                         //"orders",
                         //"basket",
                         //"locations",
